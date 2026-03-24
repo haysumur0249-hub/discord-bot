@@ -1,7 +1,7 @@
 import discord
 from discord.ext import tasks
 
-TOKEN = 'MTQ4NTkyMjM1MzMzMzUzODg1Ng.G70gjC.PGjZX9E3T5cfTo6oHzybu6HlWqM0dG-_Dzmshw'
+TOKEN = 'MTQ4NTkyMjM1MzMzMzUzODg1Ng.G8mkxU.B6Uy0eD08lXa4cb5-Nk90pP9VgHqMvCulLWBUI'
 CHANNEL_ID = 1455257168562356408
 
 intents = discord.Intents.default()
@@ -11,8 +11,6 @@ async def send_message(content):
     channel = client.get_channel(CHANNEL_ID)
     if channel:
         await channel.send(content)
-    else:
-        print("চ্যানেল পাওয়া যায়নি")
 
 @tasks.loop(seconds=30)
 async def msg_30s():
@@ -34,3 +32,5 @@ async def on_ready():
     msg_24h.start()
 
 client.run(TOKEN)
+
+
